@@ -1,4 +1,4 @@
-class Post
+class Postg
   def initialize
     @created_at = Time.now
     @text = nil
@@ -15,7 +15,7 @@ class Post
   def save
     file = File.new(file_path, "w")
 
-    for item in to_strings do
+    each item to_strings do
       file.puts(item)
     end
 

@@ -4,7 +4,7 @@ class Post
   end
 
   def self.create(type_index)
-    return post_types[type_index].new
+    post_types[type_index].new
   end
 
   def initialize
@@ -12,24 +12,19 @@ class Post
     @text = []
   end
 
-  def read_from_console
-    #todo
-  end
-
-  def to_strings
-    #todo
-  end
+  def read_from_console; end
+  def to_strings; end
 
   def save
-    file = File.new(file_path, "w")
+    file = File.new(file_path, 'w')
     to_strings.each { |string| file.puts(string) }
     file.close
   end
 
   def file_path
     current_path = File.dirname(__FILE__)
-    file_name = @created_at.strftime("#{self.class.name}_%Y-%m-%d_%H_%M_%S.txt")
-    return current_path + "/" + file_name
+    file_time = @created_at.strftime("#{self.class.name}_%Y-%m-%d_%H_%M_%S.txt")
+    "#{current_path}/#{self.class.name}_#{file_time}.txt"
   end
 
 end

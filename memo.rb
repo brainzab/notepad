@@ -1,10 +1,10 @@
 class Memo < Post
   def read_from_console
-    puts "Новая заметка (все, что пишется до строчки \"end\"):"
+    puts 'Новая заметка (все, что пишется до строчки \"end\"):'
 
     @text = []
     line = nil
-    while line != "end" do
+    until line == 'end' do
       line = $stdin.gets.chomp
       @text << line
     end

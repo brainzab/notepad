@@ -1,7 +1,7 @@
-require_relative 'post.rb'
-require_relative 'link.rb'
-require_relative 'task.rb'
-require_relative 'memo.rb'
+require_relative 'post'
+require_relative 'link'
+require_relative 'task'
+require_relative 'memo'
 
 puts 'Привет, я твой блокнот!'
 puts 'Что хотите сделать?'
@@ -24,4 +24,4 @@ entry.read_from_console
 
 entry.save
 
-puts "Ура, запись сохранена!"
+puts 'Ура, запись сохранена!'

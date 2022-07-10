@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Memo < Post
   def read_from_console
     puts 'Новая заметка (все, что пишется до строчки \"end\"):'

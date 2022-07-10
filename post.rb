@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Post
   def self.post_types
     [Memo, Link, Task]

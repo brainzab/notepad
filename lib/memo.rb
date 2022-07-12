@@ -6,7 +6,7 @@ class Memo < Post
 
     @text = []
     line = nil
-    until line == 'end' do
+    until line == 'end'
       line = $stdin.gets.chomp
       @text << line
     end
@@ -16,6 +16,6 @@ class Memo < Post
 
   def to_strings
     time_string = "Созадно: #{@created_at.strftime("%Y-%m-%d_%H_%M_%S.txt")} \n\r \n\r"
-    return @text.unshift(time_string)
+    @text.unshift(time_string)
   end
 end

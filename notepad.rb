@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative 'post'
-require_relative 'link'
-require_relative 'task'
-require_relative 'memo'
+require_relative 'lib/post'
+require_relative 'lib/link'
+require_relative 'lib/task'
+require_relative 'lib/memo'
 
 puts 'Привет, я твой блокнот!'
 puts 'Что хотите сделать?'
